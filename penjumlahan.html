@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>penjumlahan</title>
+    <style>
+       body {
+           background-color: #cd5c5c;
+       }
+       h2 {
+           margin-top: 50px;
+           font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       }
+       form {
+           margin-top: 30px;
+           margin-bottom: 50px;
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       }
+       .button :hover{
+           background-color: goldenrod;
+       }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Angkamu akan Dijumlahkan</h2>
+    <form name="tambahan">
+        <table align="center">
+            <tr>
+                <td><label for="pertama">Masukkan angka pertama</label></td>
+                <td>:</td>
+                <td><input type="text" name="pertama"></td>
+            </tr>
+            <tr>
+                <td><label for="kedua">Masukkan angka kedua</label></td>
+                <td>:</td>
+                <td><input type="text" name="kedua"></td>
+            </tr>
+            <tr>
+                <td><label for="hasil">Hasil</label></td>
+                <td>:</td>
+                <td><input type="text" name="hasil"></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="button">
+                        <input type="button" onclick="tambah()" value="Tambahkan">
+                        <input type="reset" onclick="ulangi()" value="ulangi">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+<!--JAVA SCRIPT-->
+    <script>
+        alert ("Selamat Datang")
+        function input() {
+            if (tambahan.pertama.value == "" ||tambahan.kedua.value == "") {
+                alert("Anda belum memasukkan angka");
+                exit
+            }
+        }
+        function tambah() {
+            input();
+            a = parseInt(tambahan.pertama.value);
+            b = parseInt(tambahan.kedua.value);
+            tambahan.hasil.value = a+b;
+
+            document.body.style.backgroundColor="#006A4E";
+            document.body.style.color="#FFFFFF"
+        }
+        function ulangi() {
+            document.body.style.backgroundColor="#cd5c5c";
+            document.body.style.color="#000000"
+        }
+    </script>
+</body>
+</html>
